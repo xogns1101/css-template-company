@@ -528,3 +528,43 @@ section.sns ul li .bottom p.time i {
  }
 
 
+footer {
+    border-top: 2px solid black;
+
+}
+
+footer .inner {
+    width: 100%;
+    background: white;
+}
+
+footer .inner .ft-logo img{
+    vertical-align: middle; /*이미지 가운데 정렬*/
+    border: 1px solid #fff;
+    border-radius: 15px;
+    opacity: 0.9;
+    float: left;
+    margin: 30px 0 30px 30px;
+}
+
+footer .inner .address {
+    float: left;
+    margin: 40px 0 30px 30px;
+    line-height: 20px;
+}
+
+footer .inner .address li:first-child {
+    font-weight: bold;
+}
+footer .inner .en{
+    font-weight: 400px;
+}
+
+footer .inner ul.list li a {
+    float: left;
+    margin: 50px 0 30px 120px;
+}
+
+footer .inner ul.list li:nth-child(5) {
+    font-weight: bold;
+}
