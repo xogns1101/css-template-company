@@ -27,3 +27,321 @@ body {
 .en {
    font-family: 'Exo 2', sans-serif; 
 }
+
+/* header style */
+header {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+
+
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+header .inner-header {
+  /*  background: orange; */
+    width: 84%;
+    margin: 0 auto;
+}
+
+header .inner-header .logo {
+   /* background: skyblue; */
+    float: left;
+    width: 200px;
+}
+
+header .inner-header .logo img {
+    width: 100%;
+    vertical-align: middle; /*이미지 가운데 정렬*/
+
+    border: 1px solid #fff;
+    border-radius: 15px;
+    opacity: 0.9;
+}
+
+header .inner-header .gnb {
+ /*   background: violet; */
+    float: left;
+    margin-left: 80px;
+}
+
+header .inner-header .gnb li {
+    margin-right: 80px;
+}
+
+header .inner-header .gnb li a {
+    display: block;
+}
+
+header .inner-header .gnb li a:hover {
+    color: #ff8342;
+}
+
+/*nav 태그를 지목해서 gnb와 tnb의 글자를 한번에 지목*/
+header .inner-header nav li a {
+    font-size: 16px;
+    color: #fff;
+}
+
+header .inner-header .tnb {
+    float: right;
+  /*  background: greenyellow; */
+}
+
+header .inner-header .tnb li {
+    margin-right: 25px;
+}
+
+header .inner-header .tnb li:first-child i,
+header .inner-header .tnb li:nth-child(2) i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+header .inner-header .tnb li:last-child a {
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 5px 15px;
+}
+
+header .inner-header .tnb li:last-child a:hover {
+    background: #fff;
+    color: #ff8342;
+}
+
+header .inner-header .tnb li:last-child i {
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+header .inner-header nav li {
+    float: left;
+}
+
+/*section.main style*/
+
+section.main {
+    background: url(../img/vis_4.jpg) no-repeat center /cover fixed;
+    height: 100vh;
+}
+
+section.main .main-title {
+ /*   background: yellow; */
+    
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 10px #123;
+
+    animation: uprise 1s;
+}
+
+@keyframes uprise {
+    from {
+        opacity: 0;
+        top: 60%;
+    }
+    to {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+section.main .main-title h2 {
+    font-size: 55px;
+}
+
+section.main .main-title p {
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+section.main .main-title .view {
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    padding: 8px 0;
+
+    position: relative;
+    overflow: hidden;
+}
+
+section.main .main-title .view::after {
+    content: '';
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+section.main .main-title .view:hover::after {
+    width: 100%;
+}
+
+/* section에 들어갈 디자인을 일괄 지정 */
+section .title {
+    text-align: center;
+}
+
+section .title h2 {
+    font-size: 45px;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+section .title p {
+    font-size: 18px;
+    color: #555;
+}
+
+section .sub-container {
+  /*  background: orange; */
+    width: 74%;
+    margin: 0 auto;
+}
+
+/* section.about style */
+section.about {
+  /*  background: tomato; */
+    margin: 80px 0;
+}
+
+section.about .sub-container {
+    margin-top: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+}
+
+section.about .sub-container li {
+    float: left;
+    width: 33.3333%;
+    box-sizing: border-box;
+    height: 510px;
+}
+
+section.about .sub-container li .img-box {
+    overflow: hidden; /*사진 넘쳐흐를떄 이거 누르니까 해결됬음.*/
+}
+
+section.about .sub-container li .img-box img {
+    width: 100%;
+    transition: 0.6s;
+}
+
+section.about .sub-container li a:hover .img-box img {
+    transform: scale(1.2);
+}
+
+section.about .sub-container li a .text {
+    padding: 25px;
+}
+
+
+section.about .sub-container li a .text h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+section.about .sub-container li a .text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+section.about .sub-container li a .text p.more {
+    text-transform: uppercase; /*일괄 대소문자 변경 <-> lowercase*/
+    font-weight: 700;
+
+
+    position: relative;
+    padding-left: 40px;
+}
+
+section.about .sub-container li a .text p.more::before {
+    content: '→';
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: #ff8342;
+    border-radius: 50%; /*원 만들고 싶을때 50%*/
+
+    position: absolute;
+    top: -7px;
+    left: 0;
+}
+
+/* section.innovation style*/
+section.innovation {
+    margin-bottom: 150px;
+}
+
+section.innovation .img-box {
+    margin-top: 50px;
+    height: 540px;
+    background: url(../img/product_1.jpg) no-repeat center / cover;
+
+    position: relative;
+}
+
+section.innovation .img-box .inner {
+    background: #3a3c4e;
+    width: 80%;
+    color: #fff;
+
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+section.innovation .img-box .inner h3 {
+    background: white;
+    color: #222;
+    font-size: 18px;
+    padding: 25px 45px;
+    box-sizing: border-box;
+}
+
+section.innovation .img-box .inner .bottom {
+    padding: 35px 85px;
+    box-sizing: border-box;
+}
+
+section.innovation .img-box .inner .bottom p {
+ /*   background: yellow; */
+    float: left;
+    width: 70%;
+    line-height: 1.6;
+}
+
+section.innovation .img-box .inner .bottom a {
+  /*  background: aqua; */
+    /* display: block; -->float 사용할꺼면 굳이 block으로 바꿀필요없음 */
+    float: right;
+    padding: 7px 30px;
+    border-radius: 50px;
+    background: #ff8342;
+}
+
+section.innovation .img-box .inner .bottom a:hover {
+    background: #f86010;
+
+}
+
